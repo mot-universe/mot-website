@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme {
+  /* Dark Backgrounds */
+  --color-bg-main: #0F0015;      /* Xikelitc */
+  --color-bg-card: #38055E;      /* Persian Indigo */
+  --color-bg-dark: #030007;      /* Rich Black Fogra 39 */
+
+  /* Neon & Accent Colors */
+  --color-neon-purple: #9D09EA;  /* Purple X 11 */
+  --color-neon-violet: #7D16B7;  /* Violet RYB */
+  --color-neon-cyan: #00F0FF;    /* Cyber Cyan Accent */
+  --color-neon-purple2: #C275EB;    /* Cyber Cyan Accent */
+  --color-accent-copper: #BC742F;/* Copper */
+  --color-accent-satin: #BD6175; /* Cinnamon Satin */
+  --color-laser-purple: #c084fc;
+
+  /* Text & Muted Colors */
+  --color-color-main: #F2F1F2;    /* Cultured */
+  --color-color-muted: #7A5677;   /* Chinese Violet */
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 25s linear infinite;
+}

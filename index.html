@@ -1,452 +1,321 @@
-<!doctype html>
-<html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>MoT</title>
-	  <link rel="icon" type="image/png" href="asset/image/mot logo new.png" />
-    <meta name="description" content="MoT website layout. Semua visual memakai video player." />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="aos-master/dist/aos.css">
+    <link href="src/output.css" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/img/MoTicon.png" type="image/x-icon">
+    <title>MoT Studio</title>
+</head>
+<body class="bg-bg-main">
+    <!-- navbar -->
+    <header id="mainHeader" class="bg-bg-card fixed top-0 left-0 w-full z-50 px-4 py-1 transition-all duration-300 sm:px-6 lg:px-12 xl:px-16 xl:py-3 2xl:px-20">
+            <!-- KONTEN NAVBAR (LOGO & TOMBOL MENU) - SELALU MUNCUL -->
+            <div class="relative flex justify-between items-center max-w-7xl mx-auto z-10 2xl:max-w-full">
+                <a href="#" class="hover:text-neon-cyan transition-colors z-20">
+                    <h1 class="text-sm xl:text-2xl text-color-main tracking-wider font-bold uppercase">mot studio</h1>
+                </a>
 
-  <body>
-    <!-- Header / Navbar -->
-    <header class="header" data-header>
-      <div class="container header__inner">
-        <a class="logo" href="#top" aria-label="MoT (logo)">
-          <img src="asset/image/mot%20logo%20new.png" width="40" height="41" alt="MoT Logo" />
-        </a>
+                <!-- Tombol Menu Mobile -->
+                <button id="mobileMenuButton" class="text-2xl text-color-main cursor-pointer transition-transform duration-300 lg:hidden">
+                    <i id="menuIcon" class="ri-more-2-fill"></i>
+                </button>
 
-        <button class="nav__toggle" type="button" aria-label="Buka menu" aria-expanded="false" data-nav-toggle>
-          <span class="nav__toggleBars" aria-hidden="true"></span>
-        </button>
-
-        <nav class="nav" data-nav>
-          <ul class="nav__list" role="list">
-            <li><a class="nav__link" href="#home">HOME</a></li>
-            <li><a class="nav__link" href="#about">ABOUT</a></li>
-			  <li><a class="nav__link" href="#games">GAME</a></li>
-            <li><a class="nav__link" href="#services">SERVICE</a></li>
-            
-<!--            <li><a class="nav__link" href="#news">NEWS</a></li>-->
-            <li><a class="nav__link nav__link--cta" href="#contact">CONTACT</a></li>
-          </ul>
-        </nav>
-      </div>
+                <!-- Dropdown Mobile Menu -->
+                <nav id="mobileMenu" class="absolute top-10 left-0 w-full hidden transition-all duration-300 lg:static lg:block lg:top-0 lg:w-1/2">
+                    <div id="menuContent" class="flex flex-col items-center justify-center gap-5 py-6 bg-bg-card text-color-main px-4 rounded-xl text-sm font-semibold shadow-[0_0_20px_rgba(157,9,234,0.3) lg:flex-row lg:justify-end lg:gap-10 lg:bg-bg-card/0 lg:border-neon-purple/0 lg:py-2 lg:backdrop-blur-none">
+                        <a href="#thestudio" class="menu-link font-jura hover:text-laser-purple transition-all duration-300 hover:drop-shadow-[0_0_15px_rgba(0,240,255,0.8)] active:scale-95 cursor-pointer 2xl:text-base">The Studio</a>
+                        <a href="https://www.meowstoria.com/" target="_blank" class="menu-link font-jura hover:text-laser-purple transition-all duration-300 hover:drop-shadow-[0_0_15px_rgba(0,240,255,0.8)] active:scale-95 cursor-pointer 2xl:text-base">Meowstoria</a>
+                        <a href="#ourgames" class="menu-link font-jura hover:text-laser-purple transition-all duration-300 hover:drop-shadow-[0_0_15px_rgba(0,240,255,0.8)] active:scale-95 cursor-pointer 2xl:text-base">Our Worlds</a>
+                        <a href="#combatlab" class="menu-link font-jura hover:text-laser-purple transition-all duration-300 hover:drop-shadow-[0_0_15px_rgba(0,240,255,0.8)] active:scale-95 cursor-pointer 2xl:text-base">Combat Lab</a>
+                        <a href="src/service.html" target="_blank" class="menu-link font-jura hover:text-laser-purple transition-all duration-300 hover:drop-shadow-[0_0_15px_rgba(0,240,255,0.8)] active:scale-95 cursor-pointer 2xl:text-base">
+                            Our Services
+                        </a>
+                        <a href="#contact"
+                            class="relative inline-block w-48 hover:scale-105 active:scale-95 transition-transform duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" 
+                        viewBox="0 0 801 126"
+                        class="w-full h-auto object-cover drop-shadow-[0_4px_6px_rgba(0,0,0,0.8)]">
+                                <path fill="#00F0FF" d="M688 .6c-5.8.2-28 .8-49.5 1.5-24.7.7-110.4 1.2-233.5 1.3-132.3.2-202.3.6-219 1.4-84.9 4.1-123.4 7.6-156.4 14.3C2.2 24.6-.2 27.1 1 48.6c.3 5.1.9 9.6 1.3 10s7.3-.4 15.4-1.9c8.1-1.4 14.9-2.4 15.1-2.2 1.4 1.4-3.1 7.9-9.6 14.1l-7.4 7 3.8 7.2 3.9 7.2-6.6 6.3c-8.3 7.8-9.5 11.4-5.2 15.9 1.5 1.6 4.2 3.8 6 4.9 3.1 1.9 5.9 2 99 2.5 293.1 1.4 463.5 2.5 534.3 3.4 43.7.6 91.3 1.1 105.6 1.3l26.1.2 8.1-3.9 8-3.9.7-12.1c.4-6.7.5-29.4.4-50.6-.4-33.9-.6-38.9-2.1-41.1-3.1-4.8-21-8.9-46.3-10.8C736.2 1 704.5.3 688 .6"/></svg>
+                            <span class="absolute inset-0 flex items-center justify-center text-bg-card uppercase font-bold text-base xl:text-base">Summon Us</span>
+                        </a>
+                    </div>
+                </nav>
+            </div>
     </header>
+    <!-- navbar -->
 
-    <main id="top">
-      <!-- Hero -->
-      <section id="home" class="hero hero--center">
-        <div class="hero__bg">
-          <div class="videoFrame videoFrame--bg" data-player data-autoplay="true" data-muted="true">
-            <video class="videoFrame__video" playsinline preload="metadata" autoplay muted loop>
-                  <source src="asset/video/desperado.mp4" type="video/mp4" />
-                </video>
-          </div>
-          <div class="hero__bgOverlay"></div>
+    <!-- banner -->
+    <section class="relative min-h-screen overflow-hidden">
+        <!-- video -->
+        <div class="absolute inset-0 w-full h-full overflow-hidden -z-10">
+            <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
+                <source src="assets/img/motmain/headerVideoFit1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            <!-- Overlay gradasi kiri -->
+            <div class="absolute inset-0 pointer-events-none w-full bg-linear-to-t from-bg-main via-bg-main/60 to-transparent 2xl:w-1/2 2xl:bg-linear-to-r 2xl:via-bg-main/80"></div>
         </div>
+        <!-- video -->
 
-        <div class="container hero__inner hero__inner--center">
-          <div class="hero__left hero__left--center">
-<!--
-            <div class="hero__stack hero__stack--center">
-              <div class="hero__word">CRAFTING</div>
-              <div class="hero__word">EXCEPTIONAL</div>
-              <div class="hero__word">FUN</div>
-              <div class="hero__word">GROUNDBREAKING</div>
-              <div class="hero__word">GAMES</div>
-            </div>
--->
-			<div class="hero__spacer" aria-hidden="true"></div>
-			 <div class="hero__spacer" aria-hidden="true"></div>
-			  <div class="hero__spacer" aria-hidden="true"></div>
-            <h1 class="hero__title hero__title--center">Trusted in Brand Gamification. Driven in Game Creation</h1>
+        <!-- bg img -->
+         <div class="absolute -bottom-2.5 w-full h-full">
+            <img src="assets/landingPage/VideoFrame.png" alt="" class="w-full h-full object-cover object-bottom">
+         </div>
+        <!-- bg img -->
 
-            <p class="hero__lead hero__lead--center">
-              Gamify brands. Build great games. One universe for both worlds.
-            </p>
-
-            <div class="hero__actions hero__actions--center">
-              <a class="btn btn--primary" href="#contact">CONTACT US</a>
-              <a class="btn btn--ghost" href="#games">OUR PORTOFOLIO</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- About -->
-      <section id="about" class="section">
-        <div class="container section__inner section__inner--center">
-          <div class="section__head section__head--center">
-            <h2 class="section__title">MOT Universe is where creativity meets precision</h2>
-            <p class="section__desc">
-              uniting two powerful forces: MOT Works, our B2B innovation arm, and MOT Games, our original IP studio. We
-              believe gamification is more than a trend—it’s a transformative tool for branding, education, and
-              engagement. At the same time, we pour our heart and craft into building action game universes that stand
-              the test of time. Our mission is simple: bring ideas to life with meaning, and shape the future of
-              interactive experiences with purpose and excellence.
-            </p>
-          </div>
-
-          <div class="split split--center">
-<!--
-            <div class="split__media">
-              <div class="videoFrame" data-player>
-                <video class="videoFrame__video" playsinline preload="metadata" autoplay muted loop>
-                  <source src="asset/video/core.mp4" type="video/mp4" />
-                </video>
-              </div>
-            </div>
--->
-          </div>
-        </div>
-      </section>
-
-      <!-- Our Games (layout like What's New) -->
-      <section id="games" class="section section--dark">
-        <div class="container section__inner section__inner--center">
-          <div class="section__head section__head--center">
-            <h2 class="section__title">OUR GAMES</h2>
-            <p class="section__desc">
-              Precision-Built Action Games
-            </p>
-          </div>
-
-          <div class="cardsGrid">
-            <!-- Game 1 -->
-            <article class="cardsCard">
-              <div class="cardsCard__media">
-                <div class="videoFrame" data-player data-muted="true">
-                   <video class="videoFrame__video" playsinline preload="metadata" autoplay muted loop>
-                  <source src="asset/video/pk.mp4" type="video/mp4" />
-                </video>
-                </div>
-              </div>
-
-              <div class="cardsCard__body cardsCard__body--center">
-                <h3 class="cardsCard__title">PURRFECT KITCHEN</h3>
-<!--                <p class="muted muted--center">Kartu game biasanya punya thumbnail image — diganti video preview.</p>-->
-
-                <!-- Platform icons: PC, PlayStation, Android, iOS -->
-                <div class="platforms" aria-label="Platforms">
-<!--
-                  <span class="platformIcon" title="PC" aria-label="PC">
-                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H4V5zm2 2v7h12V7H6zm-1 11h14v2H5v-2z"/></svg>
-                  </span>
-                  <span class="platformIcon" title="PlayStation" aria-label="PlayStation">
-                    <svg viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M9 3c4 0 7 3 7 7v11h-3V10c0-2-2-4-4-4V3z"/>
-                      <path d="M7 13l7 3v3l-7-3c-2-.8-3-1.7-3-2.7 0-1.4 1.5-1.9 3-1.3z"/>
-                      <path d="M14 12l6 2.2c1.4.5 2 .9 2 1.7 0 .8-.9 1.3-2.2 1.7L14 19v-3l4.3-1.4L14 13v-1z"/>
+        <div class="relative z-10 min-h-screen flex flex-col justify-center items-center px-4 sm:px-6 lg:px-12 xl:px-16 2xl:px-20 2xl:items-start 2xl:w-1/3">
+            <div class="pb-5 2xl:pb-10" data-aos="zoom-in" data-aos-duration="1000">
+                    <svg xmlns="http://www.w3.org/2000/svg" 
+                    viewBox="0 0 296 128"
+                    class="w-52 h-auto cursor-pointer transition-all duration-300 hover:scale-105 sm:w-80 lg:w-48"
+                    >
+                        <g stroke-width="0" fill="white">
+                                <path d="M48.8 2.6c-5.2 2.7-8.9 7.5-10.8 14-2.8 9.4 5.4 22.5 14.9 24 2.3.4 3.8 1.1 3.5 1.5-.3.5-1 .7-1.5.4-2.2-1.4-2.9.8-.9 2.7 1.9 1.8 2.3 3.6 1 4.1-.3.1-5.6-5-11.8-11.4C35.9 30.4 32 25.5 32 24.1c0-1.2 1.4-4.8 3-8.1 1.7-3.3 3-6.2 3-6.6 0-1.6-7.8.8-12.5 4-9.6 6.4-18.6 18.8-22.9 31.8-4.9 14.4-3.2 27.9 5 39.8 2.8 4 3.4 5.9 3.4 10 0 3.1.8 6.8 2.2 9.7 3.3 6.9 12.9 16.7 20 20.3 6.3 3.1 12.4 4.1 11.5 1.8-2-5-2.3-4.9 5.7-2l7.7 2.7 7.4-2.7c4.1-1.4 7.5-2.2 7.5-1.8 0 .5-.4 1.2-1 1.5-2.1 1.3-1 3.5 1.8 3.5 7.3 0 22.4-11.4 27.6-20.9 1.8-3.3 3-7.4 3.4-11.9.6-5.1 1.4-7.7 3.5-10.3 11.9-15.7 9.6-39.3-5.8-59.8-5.6-7.4-15.1-14.7-20.1-15.7-1.9-.3-3.7-.4-4-.1-.4.3.8 3.5 2.5 7.1 1.7 3.7 3.1 7.3 3.1 8.2 0 1.4-21.1 24.3-23.2 25.2-.5.2-.8-.6-.8-1.7 0-1.2.7-2.4 1.5-2.7.8-.4 1.5-1.3 1.5-2.1 0-.9-.6-1.3-1.5-1-.8.4-1.7.2-2-.3-.4-.6.3-1 1.5-1 2.8 0 9-3.3 11.6-6.2 4.2-4.6 5.6-8.7 5.2-15.4-.5-7.8-3.8-13-10.7-16.8-6.2-3.3-12-3.4-18.3 0M29.4 53.2c5 3.2 18.2 12.4 20 13.9.5.5.3 1.5-.5 2.5-1.2 1.4-1 1.9 1.6 4.1 7.3 6 7 5.9 12.5 1.7 5.4-4.1 5.6-4.4 3.8-6.2-1.6-1.6-.9-2.2 13.1-11.6 6.9-4.6 12.3-7.6 13.5-7.4 2.6.4 4.4 6.4 5.3 17 .8 10.3-.4 13-8 17.9-3.2 2.1-6.7 4.1-7.7 4.4-1.5.5-1.8 2.1-2.2 9.3-.4 6.4-1.2 10.1-3.1 14.3-2.5 5.5-2.6 5.6-11 8.8l-8.5 3.3-8.7-3.2c-7.5-2.9-8.8-3.8-10.4-6.9-3.2-6.3-4.5-11.4-4.5-18l-.1-6.5-6.5-3.7c-9.5-5.5-11-7.6-11-15.3C17 60.4 19.7 50 22.6 50c1 0 4 1.4 6.8 3.2"/>
+                            
+                                <path d="M21 64.2c.2 4.1 2.9 15 4.4 17.3 2.8 4.3 9.6 6.8 17.4 6.3l6.6-.3.9 3.2c.8 2.6.5 4.5-1.2 8.9l-2.1 5.7 2.5 4.1c1.3 2.2 3.8 5.7 5.5 7.6l3 3.5 2-2.5c1.2-1.4 3.6-4.7 5.4-7.3l3.4-4.9-2.1-5.6c-1.4-4-1.8-6.8-1.4-9.2l.7-3.5h8.3c12.6 0 17.5-3.9 19.2-15.5.3-2.5.9-5.5 1.2-6.8.3-1.4.1-2.2-.8-2.2-2 0-26.7 11.8-31.8 15.2-3.9 2.6-4.5 2.7-6 1.4C54.1 77.8 24 63 22.3 63c-.7 0-1.3.6-1.3 1.2m252.8-48.5c-.9 1-2.5 4-3.7 6.8l-2.2 5 2.2 1.7c1.1 1 2.5 1.8 2.9 1.8 1.5 0 4-3.2 6.7-8.3l2.5-5.1-2.2-1.8c-2.8-2.3-4.3-2.3-6.2-.1m9.9 15.4c-6.7 3.5-7.8 5.2-4.9 8.2l2.1 2 6.5-2.7c8.6-3.7 9.6-4.9 6.6-8.1-2.9-3.1-3.2-3.1-10.3.6m-145.9 3c-1.6.9-1.8 2.9-1.8 19.7 0 13.3.4 19.2 1.2 20 1.6 1.6 11 1.6 12.6 0 .7-.7 1.2-4 1.2-8 0-3.7.4-6.8.9-6.8s1.9 1.4 3.1 3c1.2 1.7 3.1 3.5 4.3 4.1 1.9 1.1 2.5.7 5.8-3 2-2.2 3.9-4.1 4.3-4.1.3 0 .6 3.1.6 6.8 0 4 .5 7.3 1.2 8 1.6 1.6 12 1.6 13.6 0 1.7-1.7 1.7-37.9 0-39.6-.7-.7-3.5-1.2-6.4-1.2-5 0-5.4.2-11 6-3.2 3.3-6.1 6-6.5 6s-3.3-2.7-6.5-6c-5.4-5.7-6-6-10.3-6-2.5 0-5.4.5-6.3 1.1"/>
+                            
+                                <path d="M199.2 35.6c-14.6 7.3-15.9 28-2.3 37.1 15.5 10.4 37.1-.1 37.1-18.1 0-16.8-18.8-27-34.8-19M217.3 46c8.3 6.5 3.7 20-6.8 20s-15.1-13.6-6.7-19.9c3.6-2.7 10.1-2.7 13.5-.1"/>
+                            
+                                <path d="M208.2 48.2c-.6.6-1.2 1.7-1.2 2.3 0 .5-1 1.5-2.2 2-2.9 1.3-3 3.7-.2 4.9 1.1.5 2.5 1.9 3 3 .5 1.2 1.8 2.1 2.9 2.1s2.4-.9 2.9-2.1c.5-1.1 1.9-2.5 3-3 1.2-.5 2.1-1.6 2.1-2.4s-.9-1.9-2.1-2.4c-1.1-.5-2.5-1.9-3-3-1.1-2.5-3.5-3.1-5.2-1.4M234 34.9c-1.5 2.9-1.2 8.3.6 10.9 1.1 1.6 2.5 2.2 5.5 2.2h3.9v11.6c0 6.3.5 12.4 1 13.5.9 1.6 2.2 1.9 7.4 1.9 4 0 6.8-.5 7.4-1.3.7-.7 1.3-6.6 1.4-13.3l.3-11.9 5-.3c5.9-.3 7.5-1.9 7.5-7.5 0-7.8.2-7.7-20.5-7.7-17.2 0-18.5.1-19.5 1.9m44.1 12.9c-2 3.8-1.2 5.2 4.5 8l5.6 2.7 1.9-2.4c2.7-3.3 2.1-5.3-2.1-7.3-6.2-3-8.7-3.2-9.9-1M141.9 81.3c-11.7 6.2-14.1 22.6-4.7 31.4 3.8 3.6 9.2 5.3 16.8 5.3 13.1 0 17-3.6 17-15.8 0-8.2 0-8.2-10-8.2-7.1 0-9.5 1.2-8.8 4.6.3 1.7 1.7 2.8 5.2 3.8 1.5.5 1.6.9.6 2.1-2 2.4-5.9 1.8-9.1-1.4-3.3-3.3-3.5-5-1.4-9 1.8-3.7 3.4-4.2 12.4-4.7 8.2-.4 10.1-1.4 10.1-5.3 0-4.5-1.5-5.1-13-5.1-9.2 0-11.3.3-15.1 2.3m41.5.9c-.9 1.7-2.4 5.4-3.4 8.2s-3.6 9.7-5.8 15.3c-2.7 7.1-3.6 10.5-2.9 11.2.6.6 3.4 1.1 6.2 1.1 3.9 0 5.6-.5 7-2 1.5-1.6 3.1-2 8.5-2s7 .4 8.5 2c1.3 1.5 3.1 2 6.5 2 8 0 8.1-.7 1.5-19.8-3.2-9.2-6.2-17.3-6.8-18-.6-.8-3.8-1.2-9.3-1.2h-8.3zM194 96.4c0 .2.7 2 1.5 4l1.5 3.6h-7.8l1.5-4c.9-2.2 2-4 2.5-4 .4 0 .8.2.8.4m23-15.3c-.7 1.3-1 7.8-.8 18.5.3 18.4.3 18.4 7.5 18.4 5.2 0 6.3-1.6 6.3-9.6v-5.8l4 3.9 4 3.9 4-3.9 4-3.9v6c0 7.4 1.7 9.4 7.8 9.4 6.9 0 7.2-.9 7.2-19.1 0-9.2-.4-16.9-1-18-.9-1.5-2.2-1.9-6.3-1.9-5.1 0-5.3.1-10.4 5.7l-5.1 5.8-5.2-5.8c-4.9-5.5-5.4-5.7-10-5.7-4 0-5.2.4-6 2.1m47.2-.9c-1.7 1.7-1.7 34.9 0 36.6s28.9 1.7 30.6 0c.7-.7 1.2-3.1 1.2-5.5 0-5-.4-5.1-11.5-5.5-5.7-.3-7-.6-7.3-2.1-.3-1.4.5-1.7 5.2-1.7 3.6 0 6-.5 7-1.6 3.9-3.8.5-7.4-7-7.4-4.1 0-5.4-.4-5.4-1.5 0-1.2 1.4-1.5 7-1.5 9.5 0 12-1.3 12-6.1 0-2.4-.5-3.9-1.6-4.3-3.1-1.2-28.9-.7-30.2.6"/>
+                        </g>
                     </svg>
-                  </span>
--->
-                  <span class="platformIcon" title="Android" aria-label="Android">
-                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 7l-1.2-2.1.9-.5L9 6.5a7.7 7.7 0 0 1 6 0l1.3-2.1.9.5L16 7c1.6 1.2 2.6 3 2.6 5.2V19c0 1.1-.9 2-2 2H7.4c-1.1 0-2-.9-2-2v-6.8C5.4 10 6.4 8.2 8 7zm1.5 5.2a.8.8 0 1 0 0-1.6.8.8 0 0 0 0 1.6zm5 0a.8.8 0 1 0 0-1.6.8.8 0 0 0 0 1.6z"/></svg>
-                  </span>
-                  <span class="platformIcon" title="iOS" aria-label="iOS">
-                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.5 13.2c0-2 1.6-3 1.7-3.1-1-1.4-2.5-1.6-3-1.6-1.3-.1-2.5.8-3.1.8-.6 0-1.5-.8-2.5-.8-1.3 0-2.5.8-3.1 2-1.3 2.3-.3 5.7.9 7.5.6.9 1.3 1.9 2.3 1.9 1 0 1.3-.6 2.5-.6 1.2 0 1.5.6 2.5.6 1 0 1.7-1 2.3-1.9.7-1 .9-2 1-2.1-.1 0-1.9-.7-1.9-2.7z"/><path d="M14.6 6.9c.5-.6.9-1.4.8-2.3-.8.1-1.6.5-2.1 1.1-.5.6-.9 1.4-.8 2.2.8.1 1.6-.4 2.1-1z"/></svg>
-                  </span>
+            </div>
+
+            <div class="relative 2xl:top-14 2xl:space-y-10">
+                <h1 class="font-extrabold text-2xl text-center text-color-main uppercase 2xl:text-left 2xl:text-7xl" data-aos="fade-up" data-aos-duration="1000">we make games.</h1>
+                <h1 class="font-extrabold text-2xl text-center text-neon-purple uppercase xl:-mt-9 2xl:text-left 2xl:text-7xl" data-aos="fade-up" data-aos-duration="2000">take combat personally</h1>
+                <p class="text-sm text-center pt-10 text-color-main xl:pt-0 xl:text-left 2xl:text-base" data-aos="fade-up" data-aos-duration="3000">
+                    Building interactive experiences since 2018. <br> 
+                    Currently obsessed with MEOWSTORIA.
+                </p>
+                <div data-aos="fade-up" data-aos-duration="2000" class="w-fit mx-auto mt-10 xl:mx-0">
+                    <a href="https://www.meowstoria.com/" target="_blank"
+                        class="relative inline-block w-48 sm:w-56 xl:w-64 2xl:w-80 hover:scale-105 active:scale-95 transition-transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" 
+                            viewBox="0 0 801 126"
+                            class="w-full h-auto object-cover drop-shadow-[0_4px_6px_rgba(0,0,0,0.8)]">
+                                <path fill="#8000d4" d="M688 .6c-5.8.2-28 .8-49.5 1.5-24.7.7-110.4 1.2-233.5 1.3-132.3.2-202.3.6-219 1.4-84.9 4.1-123.4 7.6-156.4 14.3C2.2 24.6-.2 27.1 1 48.6c.3 5.1.9 9.6 1.3 10s7.3-.4 15.4-1.9c8.1-1.4 14.9-2.4 15.1-2.2 1.4 1.4-3.1 7.9-9.6 14.1l-7.4 7 3.8 7.2 3.9 7.2-6.6 6.3c-8.3 7.8-9.5 11.4-5.2 15.9 1.5 1.6 4.2 3.8 6 4.9 3.1 1.9 5.9 2 99 2.5 293.1 1.4 463.5 2.5 534.3 3.4 43.7.6 91.3 1.1 105.6 1.3l26.1.2 8.1-3.9 8-3.9.7-12.1c.4-6.7.5-29.4.4-50.6-.4-33.9-.6-38.9-2.1-41.1-3.1-4.8-21-8.9-46.3-10.8C736.2 1 704.5.3 688 .6"/></svg>
+                        <span class="absolute inset-0 flex items-center justify-center text-color-main uppercase font-bold text-base xl:text-xl 2xl:text-xl">meowstoria</span>
+                    </a>
                 </div>
-
-                <a class="btn btn--ghost btn--sm" href="https://purrfectkitchen.mot-universe.com/">MORE DETAIL</a>
-              </div>
-            </article>
-
-            <!-- Game 2 -->
-            <article class="cardsCard">
-              <div class="cardsCard__media">
-                <div class="videoFrame" data-player data-muted="true">
-<!--                    <img class="videoFrame__video" src="asset/video/core.gif" alt="VR preview" />-->
-					<video class="videoFrame__video" playsinline preload="metadata" autoplay muted loop>
-                  <source src="asset/video/core.mp4" type="video/mp4" />
-                </video>
-                </div>
-              </div>
-
-              <div class="cardsCard__body cardsCard__body--center">
-                <h3 class="cardsCard__title">CORE AETHER</h3>
-<!--                <p class="muted muted--center">Contoh kartu Coming Soon. Kamu bisa duplikasi sesuai kebutuhan.</p>-->
-
-                <div class="platforms" aria-label="Platforms">
-                  <span class="platformIcon" title="PC" aria-label="PC">
-                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H4V5zm2 2v7h12V7H6zm-1 11h14v2H5v-2z"/></svg>
-                  </span>
-                  <span class="platformIcon" title="PlayStation" aria-label="PlayStation">
-                    <svg viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M9 3c4 0 7 3 7 7v11h-3V10c0-2-2-4-4-4V3z"/>
-                      <path d="M7 13l7 3v3l-7-3c-2-.8-3-1.7-3-2.7 0-1.4 1.5-1.9 3-1.3z"/>
-                      <path d="M14 12l6 2.2c1.4.5 2 .9 2 1.7 0 .8-.9 1.3-2.2 1.7L14 19v-3l4.3-1.4L14 13v-1z"/>
-                    </svg>
-                  </span>
-<!--
-                  <span class="platformIcon" title="Android" aria-label="Android">
-                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 7l-1.2-2.1.9-.5L9 6.5a7.7 7.7 0 0 1 6 0l1.3-2.1.9.5L16 7c1.6 1.2 2.6 3 2.6 5.2V19c0 1.1-.9 2-2 2H7.4c-1.1 0-2-.9-2-2v-6.8C5.4 10 6.4 8.2 8 7zm1.5 5.2a.8.8 0 1 0 0-1.6.8.8 0 0 0 0 1.6zm5 0a.8.8 0 1 0 0-1.6.8.8 0 0 0 0 1.6z"/></svg>
-                  </span>
-                  <span class="platformIcon" title="iOS" aria-label="iOS">
-                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.5 13.2c0-2 1.6-3 1.7-3.1-1-1.4-2.5-1.6-3-1.6-1.3-.1-2.5.8-3.1.8-.6 0-1.5-.8-2.5-.8-1.3 0-2.5.8-3.1 2-1.3 2.3-.3 5.7.9 7.5.6.9 1.3 1.9 2.3 1.9 1 0 1.3-.6 2.5-.6 1.2 0 1.5.6 2.5.6 1 0 1.7-1 2.3-1.9.7-1 .9-2 1-2.1-.1 0-1.9-.7-1.9-2.7z"/><path d="M14.6 6.9c.5-.6.9-1.4.8-2.3-.8.1-1.6.5-2.1 1.1-.5.6-.9 1.4-.8 2.2.8.1 1.6-.4 2.1-1z"/></svg>
-                  </span>
--->
-                </div>
-
-                <a class="btn btn--ghost btn--sm" href="#contact">MORE DETAIL</a>
-              </div>
-            </article>
-
-            <!-- Game 3 -->
-            <article class="cardsCard">
-              <div class="cardsCard__media">
-                <div class="videoFrame" data-player data-muted="true">
-                   <video class="videoFrame__video" playsinline preload="metadata" autoplay muted loop>
-                  <source src="asset/video/meowstoria.mp4" type="video/mp4" />
-                </video>
-
-                </div>
-              </div>
-
-              <div class="cardsCard__body cardsCard__body--center">
-                <h3 class="cardsCard__title">MEOWSTORIA</h3>
-<!--                <p class="muted muted--center">Kartu tambahan untuk meniru list game yang lebih panjang.</p>-->
-
-                <div class="platforms" aria-label="Platforms">
-                  <span class="platformIcon" title="PC" aria-label="PC">
-                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H4V5zm2 2v7h12V7H6zm-1 11h14v2H5v-2z"/></svg>
-                  </span>
-                  <span class="platformIcon" title="PlayStation" aria-label="PlayStation">
-                    <svg viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M9 3c4 0 7 3 7 7v11h-3V10c0-2-2-4-4-4V3z"/>
-                      <path d="M7 13l7 3v3l-7-3c-2-.8-3-1.7-3-2.7 0-1.4 1.5-1.9 3-1.3z"/>
-                      <path d="M14 12l6 2.2c1.4.5 2 .9 2 1.7 0 .8-.9 1.3-2.2 1.7L14 19v-3l4.3-1.4L14 13v-1z"/>
-                    </svg>
-                  </span>
-                  <span class="platformIcon" title="Android" aria-label="Android">
-                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 7l-1.2-2.1.9-.5L9 6.5a7.7 7.7 0 0 1 6 0l1.3-2.1.9.5L16 7c1.6 1.2 2.6 3 2.6 5.2V19c0 1.1-.9 2-2 2H7.4c-1.1 0-2-.9-2-2v-6.8C5.4 10 6.4 8.2 8 7zm1.5 5.2a.8.8 0 1 0 0-1.6.8.8 0 0 0 0 1.6zm5 0a.8.8 0 1 0 0-1.6.8.8 0 0 0 0 1.6z"/></svg>
-                  </span>
-                  <span class="platformIcon" title="iOS" aria-label="iOS">
-                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.5 13.2c0-2 1.6-3 1.7-3.1-1-1.4-2.5-1.6-3-1.6-1.3-.1-2.5.8-3.1.8-.6 0-1.5-.8-2.5-.8-1.3 0-2.5.8-3.1 2-1.3 2.3-.3 5.7.9 7.5.6.9 1.3 1.9 2.3 1.9 1 0 1.3-.6 2.5-.6 1.2 0 1.5.6 2.5.6 1 0 1.7-1 2.3-1.9.7-1 .9-2 1-2.1-.1 0-1.9-.7-1.9-2.7z"/><path d="M14.6 6.9c.5-.6.9-1.4.8-2.3-.8.1-1.6.5-2.1 1.1-.5.6-.9 1.4-.8 2.2.8.1 1.6-.4 2.1-1z"/></svg>
-                  </span>
-                </div>
-
-                <a class="btn btn--ghost btn--sm" href="#contact">MORE DETAIL</a>
-              </div>
-            </article>
-          </div>
+            </div>
         </div>
-      </section>
+    </section>
+    <!-- banner -->
 
-      <!-- Our Services (layout like What's New) -->
-      <section id="services" class="section">
-        <div class="container section__inner section__inner--center">
-          <div class="section__head section__head--center">
-            <h2 class="section__title">OUR SERVICES</h2>
-            <p class="section__desc">Immersive Tech. Real Brand Impact.</p>
-          </div>
+    <!-- our games -->
+     <section id="ourgames" class="overflow-hidden px-4 space-y-10 py-10 2xl:px-20 2xl:py-20">
+        <h1 class="text-color-main font-extrabold uppercase tracking-wider 2xl:text-5xl">our games</h1>
+        <div class="relative flex flex-col gap-4 2xl:flex-row 2xl:gap-6">
+            <div class="w-full xl:w-1/2">
+                <div class="w-full h-72 border-4 border-color-main 2xl:h-120">
+                    <img src="assets/img/motmain/meowstoria/store_capsule_header.png" alt="" class="w-full h-full object-cover">
+                </div>
+                <div class="flex flex-col justify-between items-start py-5 xl:flex-row">
+                    <div class="space-y-2">
+                        <p class="text-color-main tracking-wider uppercase 2xl:text-base"><span class="font-bold 2xl:text-xl">meowstoria</span> - the rise of monster eater</p>
+                        <div class="flex gap-2 text-color-main 2xl:text-3xl">
+                            <a href="https://store.steampowered.com/app/2715920/Meowstoria/" target="_blank" class="cursor-pointer"><i class="ri-steam-fill opacity-80"></i></a>
+                            <i class="ri-playstation-fill opacity-30"></i>
+                            <i class="ri-xbox-fill opacity-30"></i>
+                            <i class="ri-switch-fill opacity-30"></i>
+                        </div>
+                    </div>
+                    <a href="https://www.meowstoria.com/" target="_blank" class="text-color-main border-2 border-color-main px-6 py-2 mr-14 uppercase 2xl:text-xl hover:scale-105 active:scale-95 transition-transform duration-300">
+                        see more
+                    </a>
+                </div>
+            </div>
+            <div class="w-full xl:w-1/2">
+                <div class="w-full h-72 border-4 border-color-main 2xl:h-120">
+                    <img src="assets/img/motmain/coreaether/CoreAetherRiseofGilgamesh.png" alt="" class="w-full h-full object-cover">
+                </div>
+                <div class="flex flex-col justify-between items-start py-5 xl:flex-row">
+                    <div class="space-y-2">
+                        <p class="text-color-main tracking-wider uppercase 2xl:text-base"><span class="font-bold 2xl:text-xl">core aether</span> - rise of gilgamesh</p>
+                        <!-- <div class="flex gap-2 text-color-main 2xl:text-3xl">
+                            <i class="ri-steam-fill opacity-80"></i>
+                            <i class="ri-playstation-fill opacity-30"></i>
+                            <i class="ri-xbox-fill opacity-30"></i>
+                            <i class="ri-switch-fill opacity-30"></i>
+                        </div> -->
+                    </div>
+                    <a href="../coreaetherRemake.com/index.html" target="_blank" class="text-color-main border-2 border-color-main px-6 py-2 uppercase mr-14 2xl:text-xl hover:scale-105 active:scale-95 transition-transform duration-300">
+                        see more
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-col items-center w-full border-4 border-color-main py-5 xl:flex-row xl:justify-between xl:px-10">
+            <div class="flex flex-col items-center gap-4 p-4 xl:flex-row xl:p-1 xl:items-end 2xl:gap-6">
+                <img src="assets/img/logoPurrfectKitchen.png" alt="" class="w-56">
+                <div class="space-y-2 pb-2">
+                    <p class="text-color-main text-center tracking-wider uppercase xl:text-left 2xl:text-base"><span class="font-bold 2xl:text-xl">purrfect kitchen</span> - an idle restaurant management game</p>
+                    <p class=" text-color-main opacity-80 w-fit mx-auto mt-10 xl:mx-0 2xl:text-xl"><i class="ri-google-play-fill"></i> Google Play</p>
+                </div>
+            </div>
 
-          <div class="cardsGrid">
-            <article class="cardsCard">
-              <div class="cardsCard__media">
-                <div class="videoFrame" data-player data-muted="true">
-                  <video class="videoFrame__video" playsinline preload="metadata" autoplay muted loop>
-                  <source src="asset/video/ar.mp4" type="video/mp4" />
+            <div class="flex flex-col justify-center items-center gap-5 xl:flex-row xl:gap-10 xl:pr-3">
+                    <a href="https://play.google.com/store/apps/details?id=com.MoT.PurrfectKitchen&pli=1" target="_blank"
+                    class="relative w-48 sm:w-56 xl:w-64 2xl:w-80 hover:scale-105 active:scale-95 transition-transform duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" 
+                        viewBox="0 0 801 126"
+                        class="w-full h-auto object-cover drop-shadow-[0_4px_6px_rgba(0,0,0,0.8)]">
+                            <path fill="#8000d4" d="M688 .6c-5.8.2-28 .8-49.5 1.5-24.7.7-110.4 1.2-233.5 1.3-132.3.2-202.3.6-219 1.4-84.9 4.1-123.4 7.6-156.4 14.3C2.2 24.6-.2 27.1 1 48.6c.3 5.1.9 9.6 1.3 10s7.3-.4 15.4-1.9c8.1-1.4 14.9-2.4 15.1-2.2 1.4 1.4-3.1 7.9-9.6 14.1l-7.4 7 3.8 7.2 3.9 7.2-6.6 6.3c-8.3 7.8-9.5 11.4-5.2 15.9 1.5 1.6 4.2 3.8 6 4.9 3.1 1.9 5.9 2 99 2.5 293.1 1.4 463.5 2.5 534.3 3.4 43.7.6 91.3 1.1 105.6 1.3l26.1.2 8.1-3.9 8-3.9.7-12.1c.4-6.7.5-29.4.4-50.6-.4-33.9-.6-38.9-2.1-41.1-3.1-4.8-21-8.9-46.3-10.8C736.2 1 704.5.3 688 .6"/></svg>
+                        <span class="absolute inset-0 flex items-center justify-center text-color-main uppercase font-bold text-base xl:text-xl 2xl:text-xl">play now</span>
+                    </a>
+                    <a href="https://purrfectkitchen.mot-universe.com/" target="_blank" class="text-color-main border-2 border-color-main px-6 py-2 uppercase 2xl:text-xl hover:scale-105 active:scale-95 transition-transform duration-300">
+                        see more
+                    </a>
+            </div>
+        </div>
+     </section>
+    <!-- our games -->
+
+    <!-- the studio -->
+     <section id="thestudio" class="w-full overflow-hidden">
+        <div class="relative w-full">
+            <img src="assets/landingPage/TheStudioFG.png" alt="" class="absolute w-full h-full object-cover xl:static xl:h-auto">
+
+            <div class="relative flex flex-col gap-3 px-6 py-16 sm:px-10 xl:absolute xl:inset-0 xl:flex-row xl:items-start xl:gap-20 xl:px-72 xl:py-0 xl:mt-16">
+                <div class="w-full xl:w-2/5">
+                    <h1 class="text-bg-main font-extrabold tracking-wide xl:leading-16 capitalize xl:text-6xl">serious <br> about game, ridiculous <br> abaout combat</h1>
+                </div>
+                <div class="w-full flex flex-col gap-4 xl:w-3/5 xl:gap-7">
+                    <p class="text-xs xl:text-base">We're MOT Studio, an independent game development studio from indonesia.
+                        We've been making games and interactive experiences since 2018.
+                        Over the years, we've worked on everything from mobile and PC games to VR, mixed reality, and custom-built attractions.
+                        DEsign, animation, engineering, and occasionally, actual moving machinery. It's been an interesting ride.
+                    </p>
+
+                    <p class="text-xs xl:text-base">We like trange ideas, unlikely heroes, and games that make people laugh, struggle, and try again.
+                        And we're especially fond of a good fight.
+                        The kind where you mess up, learn something, and come back swinging.</p>
+                        
+                    <p class="font-bold xl:text-lg">A little chaos. A lot of care. That's pretty much us.</p>
+
+                    <div class="inline-block">
+                        <a href="https://www.meowstoria.com/" target="_blank"
+                        class="relative inline-block w-48 sm:w-56 xl:w-64 2xl:w-80 xl:mt-5 hover:scale-105 active:scale-95 transition-transform duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" 
+                                viewBox="0 0 801 126"
+                                class="w-full h-auto object-cover drop-shadow-[0_4px_6px_rgba(0,0,0,0.8)]">
+                                    <path fill="#8000d4" d="M688 .6c-5.8.2-28 .8-49.5 1.5-24.7.7-110.4 1.2-233.5 1.3-132.3.2-202.3.6-219 1.4-84.9 4.1-123.4 7.6-156.4 14.3C2.2 24.6-.2 27.1 1 48.6c.3 5.1.9 9.6 1.3 10s7.3-.4 15.4-1.9c8.1-1.4 14.9-2.4 15.1-2.2 1.4 1.4-3.1 7.9-9.6 14.1l-7.4 7 3.8 7.2 3.9 7.2-6.6 6.3c-8.3 7.8-9.5 11.4-5.2 15.9 1.5 1.6 4.2 3.8 6 4.9 3.1 1.9 5.9 2 99 2.5 293.1 1.4 463.5 2.5 534.3 3.4 43.7.6 91.3 1.1 105.6 1.3l26.1.2 8.1-3.9 8-3.9.7-12.1c.4-6.7.5-29.4.4-50.6-.4-33.9-.6-38.9-2.1-41.1-3.1-4.8-21-8.9-46.3-10.8C736.2 1 704.5.3 688 .6"/></svg>
+                            <span class="absolute inset-0 flex items-center justify-center text-color-main uppercase font-bold text-base xl:text-xl 2xl:text-xl">meowstoria</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
+    <!-- the studio -->
+
+    <!-- combat lab -->
+     <section id="combatlab" class="overflow-hidden px-4 xl:px-20 xl:pt-10 xl:space-y-1">
+        <h1 class="text-color-main font-extrabold uppercase xl:text-5xl">the combat lab</h1>
+        <p class="text-color-main font-bold xl:pt-10">We Have a Thing for a Good Fight.</p>
+        <p class="text-color-main">We like fights where the odds aren't always in your favor, but a well-timed decision can turn everything around.</p>
+        <p class="text-color-main">That's why we spend time exploring how attack flow, how enemies respond, and how the smallest interactions can change the feel of a fight. We build, test, and refine these ideas through gameplay experiments.</p>
+        <p class="text-color-main font-bold">Here are few of them. The enemies weren't particularly thrilled.</p>
+
+        <div class="w-full grid grid-cols-1 mt-10 gap-10 xl:grid-cols-2 xl:gap-10">
+            <div class="space-y-2">
+                <video autoplay muted loop playsinline class="w-full xl:h-96 border-4 border-color-main object-cover">
+                    <source src="assets/img/motmain/BladeStream1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
                 </video>
+                <div class="space-y-1">
+                    <p class="text-color-main font-bold xl:text-xl">Lab 001</p>
+                    <p class="text-neon-purple xl:text-base">Attack Chains - Transition - Hit Reaction</p>
+                    <p class="text-color-main italic xl:text-base">Exploring how attack connect, how actions transition, and how each hit affect the next move</p>
                 </div>
-              </div>
-              <div class="cardsCard__body cardsCard__body--center">
-                <h3 class="cardsCard__title">Gamification</h3>
-<!--                <p class="muted muted--center">End-to-end dev: design → prototyping → production.</p>-->
-                <a class="btn btn--ghost btn--sm" href="#contact">MORE DETAIL</a>
-              </div>
-            </article>
+            </div>
 
-            <article class="cardsCard">
-              <div class="cardsCard__media">
-                <div class="videoFrame" data-player data-muted="true">
-                   <video class="videoFrame__video" playsinline preload="metadata" autoplay muted loop>
-                  <source src="asset/video/vr.mp4" type="video/mp4" />
+            <div class="space-y-2">
+                <video autoplay muted loop playsinline class="w-full xl:h-96 border-4 border-color-main object-cover">
+                    <source src="assets/img/motmain/arok1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
                 </video>
+                <div class="space-y-1">
+                    <p class="text-color-main font-bold xl:text-xl">Lab 002</p>
+                    <p class="text-neon-purple xl:text-base">Timing - Counterplay - Player Response</p>
+                    <p class="text-color-main italic xl:text-base">Exploring how a defensive decision can become an offensive opportunity</p>
                 </div>
-              </div>
-              <div class="cardsCard__body cardsCard__body--center">
-                <h3 class="cardsCard__title">AR / VR / MR</h3>
-<!--                <p class="muted muted--center">Concept, 3D model, animation, technical art, dll.</p>-->
-                <a class="btn btn--ghost btn--sm" href="#contact">MORE DETAIL</a>
-              </div>
-            </article>
+            </div>
 
-            <article class="cardsCard">
-              <div class="cardsCard__media">
-                <div class="videoFrame" data-player data-muted="true">
-                  <video class="videoFrame__video" playsinline preload="metadata" autoplay muted loop>
-                  <source src="asset/video/mr.mp4" type="video/mp4" />
-                </video>
+            <!-- <div class="space-y-2" data-aos="zoom-in" data-aos-duration="1000">
+                <img src="assets/img/graphic3.png" alt="" class="w-full xl:h-96 border-4 border-color-main object-cover">
+                <div class="space-y-1">
+                    <p class="text-color-main font-bold xl:text-xl">Lab 003</p>
+                    <p class="text-neon-purple xl:text-base">Attack Chains - Transition - Hit Reaction</p>
+                    <p class="text-color-main italic xl:text-base">Exploring how attack connect, how actions transition, and how each hit affect the next move</p>
                 </div>
-              </div>
-              <div class="cardsCard__body cardsCard__body--center">
-                <h3 class="cardsCard__title">Theme Park</h3>
-<!--                <p class="muted muted--center">UA & live ops. Bisa dibuat modul/feature list.</p>-->
-                <a class="btn btn--ghost btn--sm" href="#contact">MORE DETAIL</a>
-              </div>
-            </article>
-          </div>
+            </div> -->
         </div>
-      </section>
+     </section>
+    <!-- combat lab -->
 
-      <!-- Client & Partners (carousel image logos) -->
-<!--
-      <section id="clients" class="section section--dark">
-  <div class="container section__inner section__inner--center">
-    <div class="section__head section__head--center">
-      <h2 class="section__title">CLIENT &amp; PARTNER</h2>
-      <p class="section__desc"> </p>
-    </div>
--->
+    <!-- footer -->
+     <section id="contact" class="">
+        <div class="relative w-full">
+            <img src="assets/landingPage/FooterBG.png" alt="" class="hidden w-full h-auto object-cover xl:block">
 
-    <!-- Infinite smooth logo marquee -->
-<!--
-    <div class="logoMarquee" data-logo-marquee aria-label="Client & Partners logos">
-      <div class="logoMarquee__track" data-logo-track>
-        <img class="logoMarquee__logo" src="asset/image/partner/unity.png" alt="Client 1 logo" loading="lazy" />
-        <img class="logoMarquee__logo" src="asset/image/partner/unity.png" alt="Client 2 logo" loading="lazy" />
-        <img class="logoMarquee__logo" src="asset/image/partner/unity.png" alt="Client 3 logo" loading="lazy" />
-        <img class="logoMarquee__logo" src="asset/image/partner/unity.png" alt="Client 4 logo" loading="lazy" />
-        <img class="logoMarquee__logo" src="asset/image/partner/unity.png" alt="Client 5 logo" loading="lazy" />
-      </div>
-    </div>
-  </div>
-</section>
--->
-
-
-      <!-- What's New -->
-<!--
-      <section id="news" class="section">
-        <div class="container section__inner section__inner--center">
-          <div class="section__head section__head--center">
-            <h2 class="section__title">WHAT'S NEW</h2>
-            <p class="section__desc">Kartu berita dengan cover image → diganti video.</p>
-          </div>
-
-          <div class="newsGrid newsGrid--center">
-            <article class="newsCard">
-              <div class="newsCard__media">
-                <div class="videoFrame" data-player data-muted="true">
-                  <video class="videoFrame__video" playsinline muted loop preload="metadata">
-                    <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/bee.mp4" type="video/mp4" />
-                  </video>
-                  <button class="videoFrame__toggle" type="button" aria-label="Play/Pause" data-toggle>▶</button>
+            <div class="relative xl:absolute inset-0 w-full flex flex-col items-start justify-center px-4 space-y-10 py-10 xl:flex-row xl:gap-10 xl:justify-between xl:px-20 xl:pt-32">
+                <div class="space-y-6">
+                    <p class="font-extrabold tracking-wider uppercase text-color-main xl:text-6xl">let's make <br> something matter.</p>
+                    <p class="text-color-main xl:text-lg" data-aos="fade-up" data-aos-duration="1200">Publishing opportunities, creative partnerships, or ambitious interactive project. We're always up for a good challenge.</p>
+                    <div class="inline-block">
+                    <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=contact@mot-universe.com" target="_blank"
+                    class="relative inline-block w-48 sm:w-56 xl:w-64 2xl:w-80 hover:scale-105 active:scale-95 transition-transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" 
+                            viewBox="0 0 801 126"
+                            class="w-full h-auto object-cover drop-shadow-[0_4px_6px_rgba(0,0,0,0.8)]">
+                                <path fill="#8000d4" d="M688 .6c-5.8.2-28 .8-49.5 1.5-24.7.7-110.4 1.2-233.5 1.3-132.3.2-202.3.6-219 1.4-84.9 4.1-123.4 7.6-156.4 14.3C2.2 24.6-.2 27.1 1 48.6c.3 5.1.9 9.6 1.3 10s7.3-.4 15.4-1.9c8.1-1.4 14.9-2.4 15.1-2.2 1.4 1.4-3.1 7.9-9.6 14.1l-7.4 7 3.8 7.2 3.9 7.2-6.6 6.3c-8.3 7.8-9.5 11.4-5.2 15.9 1.5 1.6 4.2 3.8 6 4.9 3.1 1.9 5.9 2 99 2.5 293.1 1.4 463.5 2.5 534.3 3.4 43.7.6 91.3 1.1 105.6 1.3l26.1.2 8.1-3.9 8-3.9.7-12.1c.4-6.7.5-29.4.4-50.6-.4-33.9-.6-38.9-2.1-41.1-3.1-4.8-21-8.9-46.3-10.8C736.2 1 704.5.3 688 .6"/></svg>
+                        <span class="absolute inset-0 flex items-center justify-center gap-2 text-color-main uppercase font-bold leading-none text-base xl:text-xl">
+                            <i class="ri-mail-fill text-xl leading-none translate-y-0.5"></i>
+                            <span class="leading-none">send e-mail</span>
+                        </span>
+                    </a>
+                    </div>
                 </div>
-              </div>
-              <div class="newsCard__body newsCard__body--center">
-                <div class="pill pill--soft">NEWS</div>
-                <h3 class="newsCard__title">MoT Update Title Placeholder</h3>
-                <p class="muted">Ringkasan singkat. Ubah sesuai konten kamu.</p>
-                <a class="btn btn--ghost btn--sm" href="#contact">READ MORE</a>
-              </div>
-            </article>
 
-            <article class="newsCard">
-              <div class="newsCard__media">
-                <div class="videoFrame" data-player data-muted="true">
-                  <video class="videoFrame__video" playsinline muted loop preload="metadata">
-                    <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4" />
-                  </video>
-                  <button class="videoFrame__toggle" type="button" aria-label="Play/Pause" data-toggle>▶</button>
+                <div class="space-y-2">
+                    <p class="text-neon-purple2 font-bold uppercase xl:text-xl">let's collaborate</p>
+                    <p class="text-color-main xl:text-lg">Publishing & Partnerships</p>
+                    <p class="text-color-main xl:text-lg">Game Development</p>
+                    <p class="text-color-main xl:text-lg">Interactive Experiences</p>
+                    <p class="text-color-main xl:text-lg">Combat Ideas</p>
                 </div>
-              </div>
-              <div class="newsCard__body newsCard__body--center">
-                <div class="pill pill--soft">NEWS</div>
-                <h3 class="newsCard__title">Another News Title</h3>
-                <p class="muted">Card kedua untuk meniru section “What’s New”.</p>
-                <a class="btn btn--ghost btn--sm" href="#contact">READ MORE</a>
-              </div>
-            </article>
 
-            <article class="newsCard">
-              <div class="newsCard__media">
-                <div class="videoFrame" data-player data-muted="true">
-                  <video class="videoFrame__video" playsinline muted loop preload="metadata">
-                    <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/bee.mp4" type="video/mp4" />
-                  </video>
-                  <button class="videoFrame__toggle" type="button" aria-label="Play/Pause" data-toggle>▶</button>
+                <div class="flex flex-col space-y-2">
+                    <p class="text-neon-purple2 uppercase font-bold xl:text-xl">find us elsewhere</p>
+                    <a href="https://www.linkedin.com/company/multiverse-of-technology/" target="_blank" class="text-color-main xl:text-lg hover:scale-105 active:scale-95 transition-transform duration-300"><i class="ri-linkedin-box-fill text-neon-purple2 pr-3"></i>LinkedIn</a>
+                    <a href="https://www.youtube.com/@multiverseoftechnology" target="_blank" class="text-color-main xl:text-lg hover:scale-105 active:scale-95 transition-transform duration-300"><i class="ri-youtube-fill text-neon-purple2 pr-3"></i>Youtube</a>
+                    <a href="https://www.instagram.com/mot.universe/" target="_blank" class="text-color-main xl:text-lg hover:scale-105 active:scale-95 transition-transform duration-300"><i class="ri-instagram-fill text-neon-purple2 pr-3"></i>Instagram</a>
+                    <a href="" class="text-color-main xl:text-lg hover:scale-105 active:scale-95 transition-transform duration-300"><i class="ri-twitter-x-fill text-neon-purple2 pr-3"></i>Twitter</a>
+                    <a href="" class="text-color-main xl:text-lg hover:scale-105 active:scale-95 transition-transform duration-300"><i class="ri-facebook-box-fill text-neon-purple2 pr-3"></i>Facebook</a>
+                    <a href="" class="text-color-main xl:text-lg hover:scale-105 active:scale-95 transition-transform duration-300"><i class="ri-tiktok-fill text-neon-purple2 pr-3"></i>Tiktok</a>
                 </div>
-              </div>
-              <div class="newsCard__body newsCard__body--center">
-                <div class="pill pill--soft">NEWS</div>
-                <h3 class="newsCard__title">Third News Title</h3>
-                <p class="muted">Kamu bisa tambah/dikurangi jumlah card.</p>
-                <a class="btn btn--ghost btn--sm" href="#contact">READ MORE</a>
-              </div>
-            </article>
-          </div>
+            </div>
+
+            <div class="flex flex-col items-center justify-between p-10 space-y-2 text-center bg-bg-card w-full xl:flex-row xl:text-left xl:h-28 xl:absolute xl:-bottom-8.5 xl:px-20">
+                <p class="text-color-main xl:text-sm">Making games and interactive experiences since 2018. <br> Indonesia</p>
+                <p class="text-color-main xl:text-sm">Serious about games. Questionably serious about everything else.</p>
+                <p class="text-color-main xl:text-sm">&copy; 2026 MOT Studio. All rights reverved</p>
+            </div>
         </div>
-      </section>
--->
+     </section>
+    <!-- footer -->
 
-      <!-- CTA Get in touch (tanpa video) -->
-      <section id="contact" class="cta">
-  <div class="container cta__inner cta__inner--center">
-    <h2 class="ctaCard__title ctaCard__title--center">
-      GET IN TOUCH<br />LET’S COLLABORATE!
-    </h2>
 
-    <div class="cta__buttons">
-      <a class="btn btn--primary btn--icon" href="mailto:contact@mot-universe.com">
-        <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
-        </svg>
-        <span>EMAIL</span>
-      </a>
-
-      <a class="btn btn--primary btn--icon" href="https://wa.me/6283175020990" target="_blank" rel="noopener">
-        <svg class="btn__icon" viewBox="0 0 32 32" aria-hidden="true">
-          <path d="M19.11 17.47c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.17-1.34-.8-.72-1.34-1.6-1.5-1.87-.16-.27-.02-.41.12-.55.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.48-.84-2.02-.22-.53-.44-.46-.61-.46h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.27s.98 2.64 1.12 2.82c.14.18 1.93 2.95 4.68 4.13.65.28 1.16.44 1.56.56.66.21 1.27.18 1.75.11.53-.08 1.6-.65 1.83-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.32z"/>
-          <path d="M26.74 5.26A13.38 13.38 0 0 0 16.02 1C8.68 1 2.71 6.97 2.71 14.31c0 2.35.62 4.64 1.8 6.66L2 31l10.25-2.69a13.25 13.25 0 0 0 6.37 1.62h.01c7.34 0 13.31-5.97 13.31-13.31 0-3.55-1.38-6.88-3.2-9.36zM18.62 27.6h-.01a11.1 11.1 0 0 1-5.66-1.55l-.41-.25-6.08 1.6 1.62-5.93-.27-.42a11.1 11.1 0 0 1-1.7-5.92C6.11 8.27 10.07 4.3 15.98 4.3c2.97 0 5.76 1.16 7.86 3.26a10.98 10.98 0 0 1 3.25 7.85c0 6.11-4.97 12.19-11.47 12.19z"/>
-        </svg>
-        <span>WHATSAPP</span>
-      </a>
-    </div>
-  </div>
-</section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container footer__inner footer__inner--center">
-        <div class="footer__top footer__top--center">
-          <div class="footer__brand">
-            <img src="asset/image/mot%20logo%20new.png" width="48" height="49" alt="MoT Logo" />
-            <p class="muted muted--center">MoT — Interactive experiences with purpose.</p>
-          </div>
-
-<!--
-          <div class="footer__links footer__links--center">
-            <a href="#about">About</a>
-            <a href="#services">Service</a>
-            <a href="#games">Game</a>
-            <a href="#clients">Clients</a>
-            <a href="#news">News</a>
-            <a href="#contact">Contact</a>
-          </div>
--->
-
-          <div class="footer__social footer__social--center" aria-label="Social links">
-            <a href="https://www.instagram.com/mot.universe/" class="pill pill--soft">Instagram</a>
-            <a href="https://www.linkedin.com/company/multiverse-of-technology/" class="pill pill--soft">LinkedIn</a>
-            <a href="https://www.youtube.com/@multiverseoftechnology" class="pill pill--soft">YouTube</a>
-          </div>
-        </div>
-
-        <div class="footer__bottom muted muted--center">
-           Imperial Exclusive, Jl. Graha Mulia Raya C-8, Tasikmadu, Kec. Lowokwaru, Kota Malang, Jawa Timur 65143 
-          <br><br>contact@mot-universe.com
-			<br><br>+62 831 7502 0990
-<p>© 2026 MoT. All rights reserved.</p>
-        </div>
-      </div>
-    </footer>
-
-    <script src="app.js"></script>
-  </body>
+<script src="src/script.js"></script>
+<script src="aos-master/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
 </html>

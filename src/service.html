@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="../aos-master/dist/aos.css">
+    <link href="output.css" rel="stylesheet">
+    <link rel="shortcut icon" href="../assets/img/MoTicon.png" type="image/x-icon">
+    <title>Mot Studio - Service</title>
+</head>
+<body>
+    <!-- navbar -->
+    <header id="mainHeader" class="bg-bg-card fixed top-0 left-0 w-full z-50 px-4 py-1 transition-all duration-300 sm:px-6 lg:px-12 xl:px-16 xl:py-3 2xl:px-20">
+            <!-- KONTEN NAVBAR (LOGO & TOMBOL MENU) - SELALU MUNCUL -->
+            <div class="relative flex justify-between items-center max-w-7xl mx-auto z-10 2xl:max-w-full">
+                <a href="#" class="hover:text-neon-cyan transition-colors z-20">
+                    <h1 class="text-sm xl:text-2xl text-color-main tracking-wider font-bold uppercase">mot studio</h1>
+                </a>
+
+                <!-- Tombol Menu Mobile -->
+                <button id="mobileMenuButton" class="text-2xl text-color-main cursor-pointer transition-transform duration-300 lg:hidden">
+                    <i id="menuIcon" class="ri-more-2-fill"></i>
+                </button>
+
+                <!-- Dropdown Mobile Menu -->
+                <nav id="mobileMenu" class="absolute top-10 left-0 w-full hidden transition-all duration-300 lg:static lg:block lg:top-0 lg:w-1/2">
+                    <div id="menuContent" class="flex flex-col items-center justify-center gap-5 py-6 bg-bg-card text-color-main px-4 rounded-xl text-sm font-semibold shadow-[0_0_20px_rgba(157,9,234,0.3) lg:flex-row lg:justify-end lg:gap-10 lg:bg-bg-card/0 lg:border-neon-purple/0 lg:py-2 lg:backdrop-blur-none">
+                        <a href="#about" class="menu-link font-jura hover:text-laser-purple transition-all duration-300 hover:drop-shadow-[0_0_15px_rgba(0,240,255,0.8)] active:scale-95 cursor-pointer 2xl:text-base">About</a>
+                        <a href="#services" class="menu-link font-jura hover:text-laser-purple transition-all duration-300 hover:drop-shadow-[0_0_15px_rgba(0,240,255,0.8)] active:scale-95 cursor-pointer 2xl:text-base">Services</a>
+                        <a href="#ourwork" class="menu-link font-jura hover:text-laser-purple transition-all duration-300 hover:drop-shadow-[0_0_15px_rgba(0,240,255,0.8)] active:scale-95 cursor-pointer 2xl:text-base">Our Work</a>
+                        <a href="#events" class="menu-link font-jura hover:text-laser-purple transition-all duration-300 hover:drop-shadow-[0_0_15px_rgba(0,240,255,0.8)] active:scale-95 cursor-pointer 2xl:text-base">Events</a>
+                        <a href="#contact"
+                            class="relative inline-block w-48 hover:scale-105 active:scale-95 transition-transform duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" 
+                        viewBox="0 0 801 126"
+                        class="w-full h-auto object-cover drop-shadow-[0_4px_6px_rgba(0,0,0,0.8)]">
+                                <path fill="#9D09EA" d="M688 .6c-5.8.2-28 .8-49.5 1.5-24.7.7-110.4 1.2-233.5 1.3-132.3.2-202.3.6-219 1.4-84.9 4.1-123.4 7.6-156.4 14.3C2.2 24.6-.2 27.1 1 48.6c.3 5.1.9 9.6 1.3 10s7.3-.4 15.4-1.9c8.1-1.4 14.9-2.4 15.1-2.2 1.4 1.4-3.1 7.9-9.6 14.1l-7.4 7 3.8 7.2 3.9 7.2-6.6 6.3c-8.3 7.8-9.5 11.4-5.2 15.9 1.5 1.6 4.2 3.8 6 4.9 3.1 1.9 5.9 2 99 2.5 293.1 1.4 463.5 2.5 534.3 3.4 43.7.6 91.3 1.1 105.6 1.3l26.1.2 8.1-3.9 8-3.9.7-12.1c.4-6.7.5-29.4.4-50.6-.4-33.9-.6-38.9-2.1-41.1-3.1-4.8-21-8.9-46.3-10.8C736.2 1 704.5.3 688 .6"/></svg>
+                            <span class="absolute inset-0 flex items-center justify-center text-color-main uppercase font-bold text-base xl:text-base">Contact Us</span>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+    </header>
+    <!-- navbar -->
+
+    <!-- banner -->
+     <section id="about">
+        <div class="relative w-full min-h-screen px-4">
+            <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
+                <source src="../assets/video/desperado.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+            </video>
+
+            <div class="bg-linear-to-t from-white via-white/60 to-transparent absolute inset-0 w-full h-full"></div>
+
+            <div class="relative flex flex-col w-full min-h-screen justify-end items-center">
+                <div class="pb-5 2xl:pb-10" data-aos="zoom-in" data-aos-duration="1000">
+                    <svg xmlns="http://www.w3.org/2000/svg" 
+                    viewBox="0 0 120 128"
+                    class="w-8 h-auto cursor-pointer transition-all duration-300 hover:scale-105 sm:w-80 lg:w-48 xl:w-20"
+                    >
+                        <g stroke-width="0" fill="black">
+                                <path d="M48.8 2.6c-5.2 2.7-8.9 7.5-10.8 14-2.8 9.4 5.4 22.5 14.9 24 2.3.4 3.8 1.1 3.5 1.5-.3.5-1 .7-1.5.4-2.2-1.4-2.9.8-.9 2.7 1.9 1.8 2.3 3.6 1 4.1-.3.1-5.6-5-11.8-11.4C35.9 30.4 32 25.5 32 24.1c0-1.2 1.4-4.8 3-8.1 1.7-3.3 3-6.2 3-6.6 0-1.6-7.8.8-12.5 4-9.6 6.4-18.6 18.8-22.9 31.8-4.9 14.4-3.2 27.9 5 39.8 2.8 4 3.4 5.9 3.4 10 0 3.1.8 6.8 2.2 9.7 3.3 6.9 12.9 16.7 20 20.3 6.3 3.1 12.4 4.1 11.5 1.8-2-5-2.3-4.9 5.7-2l7.7 2.7 7.4-2.7c4.1-1.4 7.5-2.2 7.5-1.8 0 .5-.4 1.2-1 1.5-2.1 1.3-1 3.5 1.8 3.5 7.3 0 22.4-11.4 27.6-20.9 1.8-3.3 3-7.4 3.4-11.9.6-5.1 1.4-7.7 3.5-10.3 11.9-15.7 9.6-39.3-5.8-59.8-5.6-7.4-15.1-14.7-20.1-15.7-1.9-.3-3.7-.4-4-.1-.4.3.8 3.5 2.5 7.1 1.7 3.7 3.1 7.3 3.1 8.2 0 1.4-21.1 24.3-23.2 25.2-.5.2-.8-.6-.8-1.7 0-1.2.7-2.4 1.5-2.7.8-.4 1.5-1.3 1.5-2.1 0-.9-.6-1.3-1.5-1-.8.4-1.7.2-2-.3-.4-.6.3-1 1.5-1 2.8 0 9-3.3 11.6-6.2 4.2-4.6 5.6-8.7 5.2-15.4-.5-7.8-3.8-13-10.7-16.8-6.2-3.3-12-3.4-18.3 0M29.4 53.2c5 3.2 18.2 12.4 20 13.9.5.5.3 1.5-.5 2.5-1.2 1.4-1 1.9 1.6 4.1 7.3 6 7 5.9 12.5 1.7 5.4-4.1 5.6-4.4 3.8-6.2-1.6-1.6-.9-2.2 13.1-11.6 6.9-4.6 12.3-7.6 13.5-7.4 2.6.4 4.4 6.4 5.3 17 .8 10.3-.4 13-8 17.9-3.2 2.1-6.7 4.1-7.7 4.4-1.5.5-1.8 2.1-2.2 9.3-.4 6.4-1.2 10.1-3.1 14.3-2.5 5.5-2.6 5.6-11 8.8l-8.5 3.3-8.7-3.2c-7.5-2.9-8.8-3.8-10.4-6.9-3.2-6.3-4.5-11.4-4.5-18l-.1-6.5-6.5-3.7c-9.5-5.5-11-7.6-11-15.3C17 60.4 19.7 50 22.6 50c1 0 4 1.4 6.8 3.2"/>
+                            
+                                <path d="M21 64.2c.2 4.1 2.9 15 4.4 17.3 2.8 4.3 9.6 6.8 17.4 6.3l6.6-.3.9 3.2c.8 2.6.5 4.5-1.2 8.9l-2.1 5.7 2.5 4.1c1.3 2.2 3.8 5.7 5.5 7.6l3 3.5 2-2.5c1.2-1.4 3.6-4.7 5.4-7.3l3.4-4.9-2.1-5.6c-1.4-4-1.8-6.8-1.4-9.2l.7-3.5h8.3c12.6 0 17.5-3.9 19.2-15.5.3-2.5.9-5.5 1.2-6.8.3-1.4.1-2.2-.8-2.2-2 0-26.7 11.8-31.8 15.2-3.9 2.6-4.5 2.7-6 1.4C54.1 77.8 24 63 22.3 63c-.7 0-1.3.6-1.3"/>
+                        </g>
+                    </svg>
+                </div>
+
+                <div class="pb-10 xl:pb-5 xl:mb-8">
+                    <h1 class="font-extrabold text-center capitalize pb-1 xl:text-6xl">game development, gamification &</h1>
+                    <h1 class="font-extrabold text-center capitalize pb-4 text-neon-purple xl:text-6xl">Theme Park Experience.</h1>
+                    <p class="text-center text-xs xl:text-base">We make games. Some stay on screens. Others end up running entire attractions.</p>
+                    <p class="text-center text-xs xl:text-base pb-5 xl:pb-8">MOT an Independent game art and development also interactive production studio. Working across digital experiences, immersive attractions, and connected systems.</p>
+
+                    <div class="flex flex-col justify-center items-center gap-4 xl:gap-10 xl:flex-row">
+                        <div class="w-fit">
+                            <a href="#ourwork"
+                                class="relative inline-block w-48 sm:w-56 xl:w-64 2xl:w-80 hover:scale-105 active:scale-95 transition-transform duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" 
+                                    viewBox="0 0 801 126"
+                                    class="w-full h-auto object-cover drop-shadow-[0_4px_6px_rgba(0,0,0,0.8)]">
+                                        <path fill="#8000d4" d="M688 .6c-5.8.2-28 .8-49.5 1.5-24.7.7-110.4 1.2-233.5 1.3-132.3.2-202.3.6-219 1.4-84.9 4.1-123.4 7.6-156.4 14.3C2.2 24.6-.2 27.1 1 48.6c.3 5.1.9 9.6 1.3 10s7.3-.4 15.4-1.9c8.1-1.4 14.9-2.4 15.1-2.2 1.4 1.4-3.1 7.9-9.6 14.1l-7.4 7 3.8 7.2 3.9 7.2-6.6 6.3c-8.3 7.8-9.5 11.4-5.2 15.9 1.5 1.6 4.2 3.8 6 4.9 3.1 1.9 5.9 2 99 2.5 293.1 1.4 463.5 2.5 534.3 3.4 43.7.6 91.3 1.1 105.6 1.3l26.1.2 8.1-3.9 8-3.9.7-12.1c.4-6.7.5-29.4.4-50.6-.4-33.9-.6-38.9-2.1-41.1-3.1-4.8-21-8.9-46.3-10.8C736.2 1 704.5.3 688 .6"/></svg>
+                                <span class="absolute inset-0 flex items-center justify-center text-color-main uppercase font-bold text-base xl:text-2xl">OUR WORK</span>
+                            </a>
+                        </div>
+                        <div class="">
+                            <a href="#contact" class="text-sm px-2 py-2 xl:text-2xl xl:px-12 xl:py-2 border-2 border-neon-purple">
+                                START YOUR PROJECTS
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
+    <!-- banner -->
+
+    <!-- service -->
+     <section id="services">
+        <div class="w-full py-12 px-4 xl:px-16">
+            <h1 class="text-2xl uppercase font-extrabold text-neon-purple tracking-wider xl:text-6xl">services</h1>
+            <p class="text-sm xl:text-lg"><span class="font-bold">Game Development, Creative Production& Custom Interactive Solutions.</span> From individual game assets to complete applications, location-based entertaiment, multiplayer systems, and integrations with physical equipment.</p>
+            <div class="grid grid-cols-1 py-6 gap-16 xl:grid-cols-5 xl:gap-8 xl:py-4">
+                <div class="space-y-1">
+                    <img src="../assets/img/motservice/webBahan/gamedevelopment.jpg" alt="" class="w-full aspect-square object-cover">
+                    <h3 class="font-bold xl:text-lg">Game Development</h3>
+                    <p class="xl:text-base">Full game production, gameplay systems, multiplayer, and custom game development.</p>
+                </div>
+                <div class="space-y-1">
+                    <img src="../assets/img/motservice/webBahan/gameartanimation.jpg" alt="" class="w-full aspect-square object-cover">
+                    <h3 class="font-bold xl:text-lg">Game Art & Animation</h3>
+                    <p class="xl:text-base">2D/3D assets, characters, environments, animation, and game-ready content.</p>
+                </div>
+                <div class="space-y-1">
+                    <img src="../assets/img/motservice/webBahan/ARVRMR.jpg" alt="" class="w-full aspect-square object-cover">
+                    <h3 class="font-bold xl:text-lg">AR, VR &Mixed Reality</h3>
+                    <p class="xl:text-base">Immersive applications, location-based experiences, and multiplayer environments.</p>
+                </div>
+                <div class="space-y-1">
+                    <img src="../assets/img/motservice/webBahan/GAMIFICATION.jpg" alt="" class="w-full aspect-square object-cover">
+                    <h3 class="font-bold xl:text-lg">Gamification & Interactive Systems</h3>
+                    <p class="xl:text-base">Interactive learning, real-time data, live streaming integrations, digital puppetry, and gsture-based interaction.</p>
+                </div>
+                <div class="space-y-1">
+                    <img src="../assets/img/motservice/webBahan/THEMEPARK.jpg" alt="" class="w-full aspect-square object-cover">
+                    <h3 class="font-bold xl:text-lg">Theme Park & Interactive Attractions</h3>
+                    <p class="xl:text-base">Interactive projections, multiplayer attractins, and custom game-to-hardware integration</p>
+                </div>
+            </div>
+        </div>
+     </section>
+    <!-- service -->
+
+    <!-- work -->
+    <section id="ourwork" class="w-full">
+        <h2 class="text-neon-purple font-extrabold uppercase text-2xl px-4 pt-10 pb-2 xl:text-6xl xl:px-16">works</h2>
+
+        <!-- Pembungkus AOS dipisah dari slider supaya tidak bentrok dengan transform -->
+        <div class="xl:px-16">
+            <div id="worksSlider" class="relative w-full overflow-hidden aspect-square xl:aspect-21/9 bg-black">
+                <div id="worksTrack" class="flex h-full transition-transform duration-700 ease-in-out">
+                    <div class="w-full h-full shrink-0">
+                        <video muted playsinline preload="metadata" class="w-full h-full object-cover">
+                            <source src="../assets/video/desperado.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="w-full h-full shrink-0">
+                        <video muted playsinline preload="metadata" class="w-full h-full object-cover">
+                            <source src="../assets/video/mrHighSpeedTrain.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="w-full h-full shrink-0">
+                        <video muted playsinline preload="metadata" class="w-full h-full object-cover">
+                            <source src="../assets/video/our work/3.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="w-full h-full shrink-0">
+                        <video muted playsinline preload="metadata" class="w-full h-full object-cover">
+                            <source src="../assets/video/our work/4.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="w-full h-full shrink-0">
+                        <video muted playsinline preload="metadata" class="w-full h-full object-cover">
+                            <source src="../assets/video/our work/5.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="w-full h-full shrink-0">
+                        <video muted playsinline preload="metadata" class="w-full h-full object-cover">
+                            <source src="../assets/video/our work/6.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="w-full h-full shrink-0">
+                        <video muted playsinline preload="metadata" class="w-full h-full object-cover">
+                            <source src="../assets/video/our work/7.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <!-- tambah slide lain dengan pola yang sama -->
+                </div>
+                <!-- Pagination (diisi otomatis oleh JS) -->
+                <div id="worksDots" class="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 flex items-center gap-3"></div>
+            </div>
+        </div>
+
+        <p class="px-4 py-3 text-sm xl:px-16 xl:text-base">
+            <span class="font-bold">Selected Client Projects Across Games, Attractions & Gamification.</span>
+            A closer look at completed assignments, documented through gameplay footage, on-site installations, and technical demonstrations.
+        </p>
+    </section>
+    <!-- work -->
+
+    <!-- about -->
+     <section id="about">
+        <div class="px-4 xl:px-16">
+            <h2 class="text-neon-purple font-extrabold uppercase text-2xl py-2 xl:text-6xl">about</h2>
+
+            <div class="bg-bg-main space-y-4 p-2 xl:p-4">
+                <p class="text-sm font-bold text-color-main  xl:text-base">Independent Studio. Established Experience. Based in Malang.</p>
+                <p class="text-sm text-color-main xl:text-base">MOT is a game development and interactive production studio based in Malang, Indonesia, with commercial project Experience since 2018.
+                    <br>
+                Surrounded by East Java's remarkable landscapes, Malang is also one of Indonesia's established education hubs, home to strong pipeline of emerging IT, engineering, and creative talent.
+                <br>
+                This combination of technical talent and creative culture provides a strong foundation for our work, from commercial productions to immersive attractions and connected systems.
+                </p>
+
+                <div class="flex flex-col gap-6 xl:flex-row">
+                    <div class="aspect-video">
+                        <img src="../assets/img/motservice/webBahan/about1.jpg" alt="" class="w-full h-full object-cover">
+                    </div>
+                    <div class="aspect-video">
+                        <img src="../assets/img/motservice/webBahan/about2.jpg" alt="" class="w-full h-full object-cover">
+                    </div>
+                    <div class="aspect-video">
+                        <img src="../assets/img/motservice/webBahan/about3.jpg" alt="" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
+    <!-- about -->
+
+    <!-- clients -->
+     <section id="client">
+        <h2 class="text-neon-purple font-extrabold uppercase text-4xl py-4 xl:text-6xl xl:px-16">clients</h2>
+        <div class="bg-bg-main w-full px-4 xl:px-16">
+            <div class="relative w-full overflow-hidden py-10 px-4 bg-transparent mask-[linear-gradient(to_right,transparent_0%,black_10%,black_90%,transparent_100%)]">
+                <div class="animate-marquee flex items-center gap-12 lg:gap-20">
+                
+                    <!-- ================= SET 1 LOGO ================= -->
+                    <div class="flex items-center gap-12 lg:gap-20 shrink-0">
+                        <img src="../assets/img/clients/pertamina_logo.png" alt="Pertamina" class="h-10 md:h-12 2xl:h-24 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity">
+                        <img src="../assets/img/clients/bni_logo.png" alt="BNI" class="h-10 md:h-12 2xl:h-24 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity">
+                        <img src="../assets/img/clients/mandiri_logo.png" alt="Mandiri" class="h-10 md:h-12 2xl:h-24 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity">
+                        <img src="../assets/img/clients/wir_logo.png" alt="WIR" class="h-10 md:h-12 2xl:h-24 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity">
+                        <img src="../assets/img/clients/jtp_logo.png" alt="JTP" class="h-10 md:h-12 2xl:h-24 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity">
+                        <img src="../assets/img/clients/wbl_logo.png" alt="WBL" class="h-10 md:h-12 2xl:h-24 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity">
+                        <img src="../assets/img/clients/catchplay.png" alt="Catchplay" class="h-10 md:h-12 2xl:h-24 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity">
+                        <img src="../assets/img/clients/bp_logo.png" alt="BP" class="h-10 md:h-12 2xl:h-24 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity">
+                        <img src="../assets/img/clients/um_logo.png" alt="UM" class="h-10 md:h-12 2xl:h-24 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity">
+                        <img src="../assets/img/clients/itb_logo.png" alt="ITB" class="h-10 md:h-12 2xl:h-24 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity">
+                        <img src="../assets/img/clients/komdigi_logo.png" alt="Komdigi" class="h-10 md:h-12 2xl:h-24 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity">
+                        <img src="../assets/img/clients/kek.png" alt="KEK" class="h-10 md:h-12 2xl:h-24 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity">
+                    </div>
+
+                    <!-- ================= SET 2 LOGO (DUPLIKAT PERSIS UNTUK SEAMLESS LOOP) ================= -->
+                    <div class="flex items-center gap-12 lg:gap-20 shrink-0" aria-hidden="true">
+                        <img src="../assets/img/clients/pertamina_logo.png" alt="Pertamina" class="h-10 md:h-12 2xl:h-24 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity">
+                        <img src="../assets/img/clients/bni_logo.png" alt="BNI" class="h-10 md:h-12 2xl:h-24 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity">
+                        <img src="../assets/img/clients/mandiri_logo.png" alt="Mandiri" class="h-10 md:h-12 2xl:h-24 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity">
+                        <img src="../assets/img/clients/wir_logo.png" alt="WIR" class="h-10 md:h-12 2xl:h-24 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity">
+                        <img src="../assets/img/clients/jtp_logo.png" alt="JTP" class="h-10 md:h-12 2xl:h-24 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity">
+                        <img src="../assets/img/clients/wbl_logo.png" alt="WBL" class="h-10 md:h-12 2xl:h-24 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity">
+                        <img src="../assets/img/clients/catchplay.png" alt="Catchplay" class="h-10 md:h-12 2xl:h-24 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity">
+                        <img src="../assets/img/clients/bp_logo.png" alt="BP" class="h-10 md:h-12 2xl:h-24 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity">
+                        <img src="../assets/img/clients/um_logo.png" alt="UM" class="h-10 md:h-12 2xl:h-24 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity">
+                        <img src="../assets/img/clients/itb_logo.png" alt="ITB" class="h-10 md:h-12 2xl:h-24 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity">
+                        <img src="../assets/img/clients/komdigi_logo.png" alt="Komdigi" class="h-10 md:h-12 2xl:h-24 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity">
+                        <img src="../assets/img/clients/kek.png" alt="KEK" class="h-10 md:h-12 2xl:h-24 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity">
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 text-color-main w-full font-jura md:grid-cols-3 gap-8 px-4 pt-10 pb-20 2xl:pt-20 2xl:grid-cols-4">
+                <div class="border-r-2 border-white/20 px-4 w-full">
+                    <h2 class="text-4xl font-manrope font-bold 2xl:text-6xl">8+</h2>
+                    <p class="text-base/relaxed sm:text-lg 2xl:text-2xl">Years of Experience</p>
+                    <p class="text-xs/relaxed tracking-wide sm:text-base 2xl:text-lg">In the immersive tech industry</p>
+                </div>
+                <div class="border-r-2 border-white/20 px-4 w-full">
+                    <h2 class="text-4xl font-manrope font-bold 2xl:text-6xl">80+</h2>
+                    <p class="text-base/relaxed sm:text-lg 2xl:text-2xl">Project Completed</p>
+                    <p class="text-xs/relaxed tracking-wide sm:text-base 2xl:text-lg">Various industries & platforms</p>
+                </div>
+                <div class="border-r-2 border-white/20 px-4 w-full">
+                    <h2 class="text-4xl font-manrope font-bold 2xl:text-6xl">60+</h2>
+                    <p class="text-base/relaxed sm:text-lg 2xl:text-2xl">Trusted by Clients</p>
+                    <p class="text-xs/relaxed tracking-wide sm:text-base">From startups to corporations</p>
+                </div>
+                <!-- <div class="border-r-2 border-white/20 px-4">
+                    <h2 class="text-4xl font-manrope font-bold 2xl:text-6xl">3</h2>
+                    <p class="text-base/relaxed sm:text-lg 2xl:text-2xl">game published</p>
+                    <p class="text-xs/relaxed tracking-wide sm:text-base">Tersedia di Play Store</p>
+                </div>
+                <div class="border-r-2 border-white/20 px-4">
+                    <h2 class="text-4xl font-manrope font-bold 2xl:text-6xl">6K+</h2>
+                    <p class="text-base/relaxed sm:text-lg 2xl:text-2xl">players lifetime</p>
+                    <p class="text-xs/relaxed tracking-wide sm:text-base">Aktif bermain game kami</p>
+                </div> -->
+                <div class="border-r-2 border-white/20 px-4 2xl:border-r-0 w-full">
+                    <h2 class="text-4xl font-manrope font-bold 2xl:text-6xl">6</h2>
+                    <p class="text-base/relaxed sm:text-lg 2xl:text-2xl">Theme park Installation</p>
+                    <p class="text-xs/relaxed tracking-wide sm:text-base">Interactive attractions are operational and capable of drawing 70K+ visitors.</p>
+                </div>
+            </div>
+        </div>
+     </section>
+    <!-- clients -->
+
+    <!-- games -->
+     <section id="events">
+        <div class="space-y-3 px-4 py-5 xl:px-16 xl:py-10">
+            <h2 class="text-neon-purple font-extrabold uppercase text-2xl py-4 xl:text-6xl">Events</h2>
+            <!-- <div class="grid grid-cols-2 grid-rows-2 gap-4 w-full aspect-square xl:aspect-4/3 xl:gap-10">
+                <div class="relative overflow-hidden">
+                    <img src="../assets/img/graphic4.png" alt="Graphic 1"
+                        class="absolute inset-0 w-full h-full object-cover">
+                </div>
+
+                <div class="relative overflow-hidden row-span-2">
+                    <img src="../assets/img/purffect1.jpg" alt="Graphic 2"
+                        class="absolute inset-0 w-full h-full object-cover">
+                </div>
+
+                <div class="relative overflow-hidden">
+                    <img src="../assets/img/graphic3.png" alt="Graphic 3"
+                        class="absolute inset-0 w-full h-full object-cover">
+                </div>
+            </div> -->
+            <div class="grid grid-cols-1 gap-4 w-full xl:grid-cols-3 xl:gap-10">
+                <div class="relative overflow-hidden aspect-square">
+                    <img src="../assets/img/motservice/webBahan/event1.jpg" alt="Graphic 1"
+                        class="absolute inset-0 w-full h-full object-cover">
+                </div>
+
+                <div class="relative overflow-hidden aspect-square">
+                    <img src="../assets/img/motservice/webBahan/event2.jpg" alt="Graphic 2"
+                        class="absolute inset-0 w-full h-full object-cover">
+                </div>
+
+                <div class="relative overflow-hidden aspect-square">
+                    <img src="../assets/img/motservice/webBahan/event3.jpg" alt="Graphic 3"
+                        class="absolute inset-0 w-full h-full object-cover">
+                </div>
+            </div>
+            <p class="text-sm xl:text-base"><span class="font-bold">Original Titles Developed In-House.</span> Alongside commissioned work, MOT develops its own intellectual properties, with a focus on gameplay design, player experience, ang long-term creative development.</p>
+        </div>
+     </section>
+    <!-- games -->
+
+        <!-- footer -->
+     <section id="contact" class="">
+            <div class="bg-bg-main w-full flex flex-col items-start justify-center px-4 space-y-10 py-10 xl:flex-row xl:gap-5 xl:justify-between xl:px-16">
+                <div class="space-y-6">
+                    <p class="font-extrabold tracking-wider uppercase text-color-main xl:text-2xl xl:w-2xl">Discus Your Next Project With MOT Studio</p>
+                    <p class="text-color-main xl:text-lg xl:w-2xl">Publishing opportunities, creative partnerships, or ambitious interactive project. We're always up for a good challenge.</p>
+                    <div class="inline-block">
+                    <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=contact@mot-universe.com" target="_blank"
+                    class="relative inline-block w-48 sm:w-56 xl:w-64 2xl:w-80 hover:scale-105 active:scale-95 transition-transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" 
+                            viewBox="0 0 801 126"
+                            class="w-full h-auto object-cover drop-shadow-[0_4px_6px_rgba(0,0,0,0.8)]">
+                                <path fill="#8000d4" d="M688 .6c-5.8.2-28 .8-49.5 1.5-24.7.7-110.4 1.2-233.5 1.3-132.3.2-202.3.6-219 1.4-84.9 4.1-123.4 7.6-156.4 14.3C2.2 24.6-.2 27.1 1 48.6c.3 5.1.9 9.6 1.3 10s7.3-.4 15.4-1.9c8.1-1.4 14.9-2.4 15.1-2.2 1.4 1.4-3.1 7.9-9.6 14.1l-7.4 7 3.8 7.2 3.9 7.2-6.6 6.3c-8.3 7.8-9.5 11.4-5.2 15.9 1.5 1.6 4.2 3.8 6 4.9 3.1 1.9 5.9 2 99 2.5 293.1 1.4 463.5 2.5 534.3 3.4 43.7.6 91.3 1.1 105.6 1.3l26.1.2 8.1-3.9 8-3.9.7-12.1c.4-6.7.5-29.4.4-50.6-.4-33.9-.6-38.9-2.1-41.1-3.1-4.8-21-8.9-46.3-10.8C736.2 1 704.5.3 688 .6"/></svg>
+                        <span class="absolute inset-0 flex items-center justify-center gap-2 text-color-main uppercase font-bold leading-none text-base xl:text-xl">
+                            <i class="ri-mail-fill text-xl leading-none translate-y-0.5"></i>
+                            <span class="leading-none">send e-mail</span>
+                        </span>
+                    </a>
+                    </div>
+                </div>
+
+                <div class="space-y-2">
+                    <p class="text-neon-purple2 font-bold uppercase xl:text-xl">let's collaborate</p>
+                    <p class="text-color-main xl:text-lg">Publishing & Partnerships</p>
+                    <p class="text-color-main xl:text-lg">Game Development</p>
+                    <p class="text-color-main xl:text-lg">Interactive Experiences</p>
+                    <p class="text-color-main xl:text-lg">Combat Ideas</p>
+                </div>
+
+                <div class="flex flex-col space-y-2">
+                    <p class="text-neon-purple2 uppercase font-bold xl:text-xl">find us elsewhere</p>
+                    <a href="https://www.linkedin.com/company/multiverse-of-technology/" target="_blank" class="text-color-main xl:text-lg hover:scale-105 active:scale-95 transition-transform duration-300"><i class="ri-linkedin-box-fill text-neon-purple2 pr-3"></i>LinkedIn</a>
+                    <a href="https://www.youtube.com/@multiverseoftechnology" target="_blank" class="text-color-main xl:text-lg hover:scale-105 active:scale-95 transition-transform duration-300"><i class="ri-youtube-fill text-neon-purple2 pr-3"></i>Youtube</a>
+                    <a href="https://www.instagram.com/mot.universe/" target="_blank" class="text-color-main xl:text-lg hover:scale-105 active:scale-95 transition-transform duration-300"><i class="ri-instagram-fill text-neon-purple2 pr-3"></i>Instagram</a>
+                    <a href="" class="text-color-main xl:text-lg hover:scale-105 active:scale-95 transition-transform duration-300"><i class="ri-twitter-x-fill text-neon-purple2 pr-3"></i>Twitter</a>
+                    <a href="" class="text-color-main xl:text-lg hover:scale-105 active:scale-95 transition-transform duration-300"><i class="ri-facebook-box-fill text-neon-purple2 pr-3"></i>Facebook</a>
+                    <a href="" class="text-color-main xl:text-lg hover:scale-105 active:scale-95 transition-transform duration-300"><i class="ri-tiktok-fill text-neon-purple2 pr-3"></i>Tiktok</a>
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center justify-between p-10 space-y-2 text-center bg-bg-card w-full xl:flex-row xl:text-left xl:h-28 xl:px-20">
+                <p class="text-color-main xl:text-sm">Making games and interactive experiences since 2018. <br> Indonesia</p>
+                <p class="text-color-main xl:text-sm">Serious about games. Questionably serious about everything else.</p>
+                <p class="text-color-main xl:text-sm">&copy; 2026 MOT Studio. All rights reverved</p>
+            </div>
+
+     </section>
+    <!-- footer -->
+
+<dialog id="videoModal" class="m-auto w-[95vw] max-w-6xl bg-transparent p-0 overflow-hidden backdrop:bg-black/85 backdrop:backdrop-blur-sm">
+    <div class="relative w-full aspect-video bg-black">
+        <video id="modalVideo" controls playsinline class="w-full h-full object-contain"></video>
+
+        <button id="modalClose" type="button" aria-label="Close video"
+                class="absolute top-3 right-3 z-10 flex items-center justify-center w-10 h-10 rounded-full
+                       bg-black/60 text-white text-2xl cursor-pointer backdrop-blur-sm
+                       hover:bg-neon-purple hover:scale-110 active:scale-95 transition-all duration-300">
+            <i class="ri-close-line leading-none"></i>
+        </button>
+    </div>
+</dialog>
+
+<script src="script.js"></script>
+<script src="slideshow.js"></script>
+<script src="../aos-master/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>    
+</body>
+</html>
